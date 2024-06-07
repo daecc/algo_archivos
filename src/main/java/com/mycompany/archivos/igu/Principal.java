@@ -2,16 +2,17 @@
 package com.mycompany.archivos.igu;
 
 import com.mycompany.archivos.manejo_de_archivos;
+import com.mycompany.sistemareforzamiento.logica.Usuario;
 
 
 
 
 public class Principal extends javax.swing.JFrame {
-manejo_de_archivos cont;
+Usuario cont;
     
     public Principal() {
         initComponents();
-        cont = new manejo_de_archivos();
+        cont = new Usuario();
     }
 
     /**
@@ -164,7 +165,7 @@ manejo_de_archivos cont;
         String mensaje = cont.validarUsuario(usuario,contraseña);
         
         txtmensaje.setText(mensaje);
-        cont.validarBien(usuario, contraseña);
+        cont.iniciarSesion(usuario, contraseña);
         
         if("Contraseña incorrecta.".equals(mensaje) || "Usuario no encontrado.".equals(mensaje)){
             
