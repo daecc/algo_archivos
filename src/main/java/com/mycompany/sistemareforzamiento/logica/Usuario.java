@@ -4,9 +4,6 @@ package com.mycompany.sistemareforzamiento.logica;
 import com.mycompany.archivos.igu.PantallaAsesor;
 import com.mycompany.archivos.igu.PantallaEstudiante;
 import com.mycompany.archivos.manejo_de_archivos;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 

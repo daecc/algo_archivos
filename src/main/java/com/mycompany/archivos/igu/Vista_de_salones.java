@@ -5,6 +5,7 @@
 package com.mycompany.archivos.igu;
 
 import com.mycompany.archivos.manejo_de_archivos;
+import com.mycompany.sistemareforzamiento.logica.Alumno;
 import com.mycompany.sistemareforzamiento.logica.Aula;
 import com.mycompany.sistemareforzamiento.logica.Usuario;
 import java.util.ArrayList;
@@ -17,11 +18,13 @@ import javax.swing.table.DefaultTableModel;
  * @author cisne
  */
 public class Vista_de_salones extends javax.swing.JFrame {
-     manejo_de_archivos cont;
+     Alumno cont;
+     manejo_de_archivos manejo;
      ArrayList<Aula> au = new ArrayList<>();
     
     public Vista_de_salones() {
-        cont = new manejo_de_archivos();
+        cont = new Alumno();
+        manejo = new manejo_de_archivos();
         initComponents();
     }
 
@@ -208,7 +211,7 @@ public class Vista_de_salones extends javax.swing.JFrame {
        modeloTabla.setColumnIdentifiers(titulos);
        
        //Carga de datos desde la base de datos      
-        cont.traer_archivosaulas(au);          
+        manejo.traer_archivosaulas(au);          
        //Recorrer la lista y mostrar cada uno de los elementos
        
        if(au != null){

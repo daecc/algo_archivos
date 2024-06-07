@@ -5,6 +5,7 @@
 package com.mycompany.archivos.igu;
 
 import com.mycompany.archivos.manejo_de_archivos;
+import com.mycompany.sistemareforzamiento.logica.Asesor;
 import javax.swing.JOptionPane;
 import javax.swing.JDialog;
 
@@ -14,11 +15,11 @@ import javax.swing.JDialog;
  * @author cisne
  */
 public class Inscripcion_de_aulas_asesor extends javax.swing.JFrame {
-manejo_de_archivos cont;
+Asesor cont;
    
     
     public Inscripcion_de_aulas_asesor() {
-       cont = new manejo_de_archivos();
+       cont = new Asesor();
         initComponents();
     }
 
@@ -257,7 +258,7 @@ manejo_de_archivos cont;
         String di = txtdia.getText();
         String li = txtLink.getText();
         String Ase = txtAsesor.getText();
-        cont.guardar_datos(id,nom,ho,di,li,Ase);
+        cont.Subir_salones(id,nom,ho,di,li,Ase);
         JOptionPane optionPane = new JOptionPane("Se subio correctamente");
         optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
         JDialog dialog = optionPane.createDialog("Subida exitosa");

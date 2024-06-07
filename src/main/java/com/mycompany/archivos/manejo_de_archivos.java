@@ -1,7 +1,5 @@
 
 package com.mycompany.archivos;
-import com.mycompany.archivos.igu.PantallaAsesor;
-import com.mycompany.archivos.igu.PantallaEstudiante;
 import com.mycompany.sistemareforzamiento.logica.Alumno;
 import com.mycompany.sistemareforzamiento.logica.Asesor;
 import com.mycompany.sistemareforzamiento.logica.Aula;
@@ -11,7 +9,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -170,30 +167,6 @@ public class manejo_de_archivos {
         }
     }
     
-    public void guardar_datos(int id,String nom, String ho,String di, String li, String Ase){
-        Aula al = new Aula();
-        al.setId(id);
-        al.setNombre(nom);
-        al.setHorario(ho);
-        al.setDia(di);
-        al.setLink(li);
-        al.setDocente(Ase);
-        try{
-            BufferedWriter usu = new BufferedWriter(new FileWriter("archivo\\aula.txt",true));
-            
-                usu.write(al.getId()+"\t"+al.getNombre()+"\t"+al.getHorario()+"\t"+al.getDia()+"\t"+al.getLink()+"\t"+al.getDocente());
-                usu.newLine(); 
-            
-            usu.close();
-        }catch(IOException e){
-            System.out.println("Error al escribir el archivo"+ e.getMessage());
-        }
-        
-    }
-    
-    
-   
-    
     public void traer_archivosaulas(ArrayList<Aula> list){
         try{
             BufferedReader lector = new BufferedReader(new FileReader("archivo\\aula.txt"));
@@ -217,7 +190,6 @@ public class manejo_de_archivos {
         }
     }
     
-    
     public void crear_archivo_intermedio(){
         try {
             PrintWriter escritor = new PrintWriter("archivo\\intermedio.txt");
@@ -229,20 +201,7 @@ public class manejo_de_archivos {
         
     }
     
-    public void ingresar_inscripcion(int id_aula){
-       
-        try{
-            BufferedWriter usu = new BufferedWriter(new FileWriter("archivo\\intermedio.txt",true));
-            
-                usu.write(Usuario.id_global+"\t"+id_aula);
-                usu.newLine(); 
-        
-            usu.close();
-        }catch(IOException e){
-            System.out.println("Error al escribir el archivo"+ e.getMessage());
-        }
-        
-    }
+    
    
     
     }
