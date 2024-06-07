@@ -1,0 +1,4 @@
+1	Programacion	12:00 - 6:00 pm	Jueves	@gmail.com	Jose
+2	Algoritmica 1	8:00 - 12:00 am	Martes	@hotmail.com	Maria
+3	Programacion	2:00 - 6:00 pm	Viernes	@gmail.com	Luis
+4	Mate	12:00 - 6:00 pm 	Martes	@gmail.com	Maria
